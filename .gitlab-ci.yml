@@ -1,0 +1,32 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - docker-compose up -d 
+  tags:
+    - web_server
+
+test:
+  stage: test
+  needs:
+    - build
+  script:
+     - sh ./test/isworking.sh
+  tags:
+    - web_server
+
+deploy:
+  needs:
+    - test
+    - build
+  only: 
+    - master
+  stage: deploy
+  script:
+    - docker compose up -d
+  tags:
+    - web_server
