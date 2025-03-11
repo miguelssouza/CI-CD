@@ -1,8 +1,9 @@
-FROM python:latest
+FROM node:16
 
 WORKDIR /app
 
-COPY . /app
+COPY ./server/. /app/
 
-EXPOSE 8000
+EXPOSE 3000
 
+RUN npm install

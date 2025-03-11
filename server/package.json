@@ -1,0 +1,29 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "A webserver example to Kubernets cluster.",
+  "homepage": "https://github.com/miguelssouza/CI-CD#readme",
+  "bugs": {
+    "url": "https://github.com/miguelssouza/CI-CD/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelssouza/CI-CD.git"
+  },
+  "license": "ISC",
+  "author": "MSS Miguel Santos",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.21.2",
+    "http-errors": "~1.6.3",
+    "jade": "^0.31.2",
+    "morgan": "~1.9.1"
+  }
+}
