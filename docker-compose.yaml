@@ -1,0 +1,9 @@
+
+services:
+  webserver:
+    image: mcardso/webserver:development
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: [ "npm", "start" ]
